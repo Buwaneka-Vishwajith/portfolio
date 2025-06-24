@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body, * {
+    font-family: "Inter", sans-serif;
+  }
+    html, body {
+    background-color: #111827; /* bg-gray-900 */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+  
+  #root {
+    background-color: #111827; /* bg-gray-900 */
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar for terminal */
+  .terminal-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #171717 #171717; /* thumb color, track color */
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-track {
+    background: #171717; /* matches your bg-neutral-900 */
+    border-radius: 1px;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb {
+    background: #374151; /* matches your gray-700 */
+    border-radius: 1px;
+    border: 1px solid #171717;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #4b5563; /* slightly lighter on hover (gray-600) */
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-corner {
+    background: #171717;
+  }
+
+    /* Major Mono Display utility class */
+  .font-mono-display {
+    font-family: "Major Mono Display", monospace;
+  }
+}
+
+@layer utilities {
+  /* Additional utility classes for the mono font */
+  .text-mono-display {
+    font-family: "Major Mono Display", monospace;
+  }
+}
