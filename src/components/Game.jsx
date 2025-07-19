@@ -123,12 +123,12 @@ const PortfolioMemoryGame = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-gray-900  shadow-xl">
+    <div className="flex flex-col items-center justify-center p-4 sm:p-8 bg-gray-900 shadow-xl">
       <div className="mb-6 text-center">
         <div className="text-sm text-gray-400">{getStatusText()}</div>
       </div>
 
-      <div className={`grid ${getGridCols()} gap-2 mb-6`}>
+      <div className={`grid ${getGridCols()} gap-1 sm:gap-2 mb-6`}>
         {Array(getGridSize(level))
           .fill(null)
           .map((_, index) => (
@@ -137,7 +137,7 @@ const PortfolioMemoryGame = () => {
               onClick={() => handleClick(index)}
               disabled={gameState !== "playing"}
               className={`
-                h-16 w-16 rounded-md transition-all duration-300
+                h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 rounded-md transition-all duration-300
                 transform hover:scale-95 active:scale-90 
                 ${
                   clicked.includes(index)
@@ -164,10 +164,9 @@ const PortfolioMemoryGame = () => {
 
       {gameState === "gameOver" && (
         <div className="text-center">
-<div className="px-4 py-2  text-white/80 hover:bg-gray-300 hover:text-gray-800 transition-colors backdrop-blur-xl rounded-xl cursor-default">
-  Nevermind, keep scrolling!
-</div>
-
+          <div className="px-4 py-2 text-white/80 hover:bg-gray-300 hover:text-gray-800 transition-colors backdrop-blur-xl rounded-xl cursor-default">
+            Nevermind, keep scrolling!
+          </div>
         </div>
       )}
     </div>
