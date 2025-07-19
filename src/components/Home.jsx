@@ -613,7 +613,7 @@ const Home = () => {
       {/* Mobile/Tablet Layout (below lg) */}
       <div className="lg:hidden">
         {/* Mobile Header Section */}
-        <div className="min-h-screen bg-gray-900 relative overflow-hidden">
+        <div className=" bg-gray-900 relative overflow-hidden">
         <MouseGlow />
         
         {/* Animated Bubble Background for Mobile */}
@@ -625,7 +625,7 @@ const Home = () => {
         <div className="absolute inset-0 z-5 backdrop-blur-sm bg-slate-900/20"></div>
 
         {/* Mobile Content Container */}
-        <div className="relative z-10 px-6 py-16 flex flex-col justify-center items-center text-center">
+        <div className="relative z-10 px-6 py-12 flex flex-col justify-center items-center text-center">
           {/* Header Info - Mobile */}
           <motion.div
             className="mb-12"
@@ -662,7 +662,7 @@ const Home = () => {
           </motion.div>
 
           {/* Mobile Navigation */}
-          <motion.nav
+          {/* <motion.nav
             className="space-y-6 mb-12"
             initial="hidden"
             animate="visible"
@@ -698,7 +698,7 @@ const Home = () => {
                 </span>
               </motion.button>
             ))}
-          </motion.nav>
+          </motion.nav> */}
 
           {/* Mobile Social Links */}
           <motion.div
@@ -818,7 +818,7 @@ const Home = () => {
       </div>
 
       {/* Mobile Content Sections */}
-      <div className="lg:hidden px-6">
+      <div className="lg:hidden px-6 ">
         <ScrollReveal>
           <AnimatedSection id="about">
             <About />

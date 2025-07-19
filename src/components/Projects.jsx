@@ -135,12 +135,16 @@ const Projects = () => {
         {/* Show More Button */}
 <div className="text-center mt-8 md:mt-16 px-4">
   <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-8">
-    <span className='text-blue-400 text-xs sm:text-sm order-1 sm:order-1'>⬅</span>
+    {/* <span className='text-blue-400 text-xs sm:text-sm order-1 sm:order-1'>⬅</span> */}
+    <span className='text-blue-400 text-xs sm:text-sm order-1 sm:order-1'>
+  <span className="sm:hidden">⬆</span>
+  <span className="hidden sm:inline">⬅</span>
+</span>
     <span className='text-blue-400 text-xs sm:text-sm text-center order-3 sm:order-2'>
       Of course the Terminal has the cv
     </span>
     <span className='text-purple-300 text-lg sm:text-xl order-2 sm:order-3'>||</span>
-    <a
+    <a 
       href="/Buwaneka_Senarathne_cv.pdf"
       download
       rel="noopener noreferrer"
